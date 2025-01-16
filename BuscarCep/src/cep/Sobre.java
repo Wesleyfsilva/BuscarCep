@@ -46,7 +46,6 @@ public class Sobre extends JDialog {
      * Create the dialog.
      */
     public Sobre() {
-    	setModalityType(ModalityType.DOCUMENT_MODAL);
     	setModal(true);
         setIconImage(Toolkit.getDefaultToolkit().getImage(Sobre.class.getResource("/img/about.png")));
         setResizable(false);
