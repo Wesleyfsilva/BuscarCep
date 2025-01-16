@@ -46,8 +46,8 @@ public class Sobre extends JDialog {
      * Create the dialog.
      */
     public Sobre() {
-    	setModalExclusionType(ModalExclusionType.TOOLKIT_EXCLUDE);
-    	setModalityType(ModalityType.TOOLKIT_MODAL);
+    	setModalityType(ModalityType.DOCUMENT_MODAL);
+    	setModal(true);
         setIconImage(Toolkit.getDefaultToolkit().getImage(Sobre.class.getResource("/img/about.png")));
         setResizable(false);
         setTitle("Sobre");
@@ -122,4 +122,5 @@ public class Sobre extends JDialog {
 			System.out.println(e);
 		}
     }
+    
 }

@@ -25,6 +25,7 @@ import org.dom4j.io.SAXReader;
 
 import Atxy2k.CustomTextField.RestrictedTextField;
 import javax.swing.DefaultComboBoxModel;
+import java.awt.Font;
 
 public class Cep extends JFrame {
 
@@ -71,16 +72,19 @@ public class Cep extends JFrame {
 		contentPane.setLayout(null);
 
 		JLabel lblNewLabel = new JLabel("Cep");
-		lblNewLabel.setBounds(10, 29, 46, 14);
+		lblNewLabel.setForeground(SystemColor.desktop);
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		lblNewLabel.setBounds(10, 21, 46, 26);
 		contentPane.add(lblNewLabel);
 
 		txtCep = new JTextField();
-		txtCep.setBounds(66, 26, 129, 20);
+		txtCep.setBounds(76, 24, 129, 20);
 		contentPane.add(txtCep);
 		txtCep.setColumns(10);
 
 		JLabel lblNewLabel_1 = new JLabel("Endereço");
-		lblNewLabel_1.setBounds(10, 66, 61, 14);
+		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		lblNewLabel_1.setBounds(10, 66, 120, 14);
 		contentPane.add(lblNewLabel_1);
 
 		txtEndereco = new JTextField();
@@ -102,17 +106,17 @@ public class Cep extends JFrame {
 		contentPane.add(lblNewLabel_3);
 
 		txtCidade = new JTextField();
-		txtCidade.setBounds(86, 149, 231, 20);
+		txtCidade.setBounds(76, 149, 231, 20);
 		contentPane.add(txtCidade);
 		txtCidade.setColumns(10);
 
 		JLabel lblNewLabel_4 = new JLabel("UF");
-		lblNewLabel_4.setBounds(307, 152, 21, 14);
+		lblNewLabel_4.setBounds(317, 152, 21, 14);
 		contentPane.add(lblNewLabel_4);
 
 		cboUF = new JComboBox();
 		cboUF.setModel(new DefaultComboBoxModel(new String[] {"", "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO"}));
-		cboUF.setBounds(327, 148, 53, 22);
+		cboUF.setBounds(334, 148, 53, 22);
 		contentPane.add(cboUF);
 
 		JButton btnBuscar = new JButton("BUSCAR");
@@ -129,13 +133,13 @@ public class Cep extends JFrame {
 			}
 		});
 		btnBuscar.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
-		btnBuscar.setBounds(267, 25, 89, 23);
+		btnBuscar.setBounds(218, 23, 89, 23);
 		contentPane.add(btnBuscar);
 
 		JButton btnLimpar = new JButton("LIMPAR");
 		btnLimpar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+				limpar();
 			}
 		});
 		btnLimpar.setBounds(41, 211, 89, 23);
@@ -217,6 +221,17 @@ public class Cep extends JFrame {
 		}catch(Exception e) {
 			System.out.println(e);
 		}
+	}
+	
+	private void limpar() {
+		txtCep.setText(null);
+		txtEndereco.setText(null);
+		txtBairro.setText(null);
+		txtCidade.setText(null);
+		cboUF.setSelectedItem(null);
+		txtCep.requestFocus();
+		lblStatus.setIcon(null);
+		
 	}
 	
 	
