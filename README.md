@@ -37,7 +37,7 @@ BuscarCep é uma aplicação Java para busca de endereços utilizando o webservi
 
 
 
-# BuscarCep
+## BuscarCep
 
 BuscarCep é uma aplicação Java para busca de endereços utilizando o webservice XML da República Virtual.
 
@@ -77,7 +77,7 @@ BuscarCep é uma aplicação Java para busca de endereços utilizando o webservi
 └── uf.txt
 
 
-Como Executar
+##Como Executar
 Clone o repositório:
 
 git clone https://github.com/Wesleyfsilva/BuscarCep.git
@@ -88,10 +88,10 @@ Compile e execute a aplicação:
 javac src/main/java/cep/*.java
 java -cp src/main/java cep.Cep
 
-Utilizando o Webservice XML da República Virtual
+##Utilizando o Webservice XML da República Virtual
 A aplicação utiliza o webservice XML da República Virtual para buscar endereços a partir do CEP informado pelo usuário. O webservice é consultado através de requisições HTTP e o XML retornado é processado para extrair as informações do endereço.
 
-Criando a Interface Gráfica com WindowBuilder
+##Criando a Interface Gráfica com WindowBuilder
 A interface gráfica da aplicação foi criada utilizando o WindowBuilder, uma ferramenta de design visual para a criação de interfaces em Java Swing. O WindowBuilder permite arrastar e soltar componentes visuais, facilitando o desenvolvimento e a personalização da interface.
 
 Contribuição
